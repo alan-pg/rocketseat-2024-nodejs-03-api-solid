@@ -3,7 +3,6 @@ import { z } from 'zod'
 import { makeCreateGymUseCase } from '@/use-cases/factories/make-create-gym-use-case'
 
 export async function create(req: FastifyRequest, reply: FastifyReply) {
-  console.log('create gym')
   const createGymBodySchema = z.object({
     title: z.string(),
     description: z.string().nullable(),
